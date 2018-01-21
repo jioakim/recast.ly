@@ -14,19 +14,6 @@ class App extends React.Component{
     });
   }
 
-  // _.debounce(func, [wait=0], [options={}])
-
-  // Arguments
-  // func (Function): The function to debounce.
-  // [wait=0] (number): The number of milliseconds to delay.
-  // [options={}] (Object): The options object.
-  // [options.leading=false] (boolean): Specify invoking on the leading edge of the timeout.
-  // [options.maxWait] (number): The maximum time func is allowed to be delayed before it's invoked.
-  // [options.trailing=true] (boolean): Specify invoking on the trailing edge of the timeout.
-
-
-  // _.debounce()
-
   searchTextChange(event) {
 
     console.log(event.target.value);
@@ -48,15 +35,6 @@ class App extends React.Component{
 
     // insideSearchTextChange();
   }
-
-  // create method for listening change of input field
-    // call searchYouTube function
-    // change options.query to search text state
-
-  // App pass this method to Nav component & pass search text state
-  // Nav pass this method to Search component
-    // use onChange to listen for changes
-    //
 
   componentDidMount(){
     // componentDidMount() is invoked immediately after a component is mounted. Initialization that requires DOM nodes should go here.
@@ -90,7 +68,6 @@ class App extends React.Component{
       return(
         <div>
           <Nav searchTextChange={_.debounce(this.searchTextChange.bind(this), 500)}/>
-          {/* <Nav searchTextChange={_.debounce(this.searchTextChange.bind(this), 500)}/> */}
           <div className="col-md-7">
             <VideoPlayer video={this.state.currentVideo}/>
           </div>
